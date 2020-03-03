@@ -52,7 +52,7 @@ class EurekaClient {
         $client = new GuzzleClient(['base_uri' => $this->config->getEurekaDefaultUrl()]);
 
         try {
-            $response = $client->request('GET', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getInstanceId(), [
+            $response = $client->request('GET', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getHostName(), [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json'
@@ -71,7 +71,7 @@ class EurekaClient {
         $client = new GuzzleClient(['base_uri' => $this->config->getEurekaDefaultUrl()]);
         $this->output("[" . date("Y-m-d H:i:s") . "]" . " De-registering...");
 
-        $response = $client->request('DELETE', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getInstanceId(), [
+        $response = $client->request('DELETE', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getHostName(), [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json'
@@ -89,7 +89,7 @@ class EurekaClient {
         $this->output("[" . date("Y-m-d H:i:s") . "]" . " Sending heartbeat...");
 
         try {
-            $response = $client->request('PUT', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getInstanceId(), [
+            $response = $client->request('PUT', '/eureka/apps/' . $this->config->getAppName() . '/' . $this->config->getHostName(), [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json'
