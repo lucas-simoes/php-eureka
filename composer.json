@@ -1,5 +1,5 @@
 {
-    "name": "lucas-simoes/php-eureka",
+    "name": "lucas-simoes/eureka-client-php",
     "description": "A PHP client for Spring Cloud Eureka discovery server.",
     "keywords": [
         "php",
@@ -7,15 +7,10 @@
         "spring cloud",
         "discovery server"
     ],
-    "homepage": "http://hamid.work",
+    "homepage": "",
     "license": "MIT",
     "authors": [
         {
-            "name": "Hamid Mohayeji",
-            "email": "h.mohayeji@gmail.com",
-            "role": "Developer"
-        },
-	{
             "name": "Lucas Simões",
             "email": "lucas_development@outlook.com",
             "role": "Developer"
