@@ -19,7 +19,7 @@
             "name": "Lucas Simões",
             "email": "lucas_development@outlook.com",
             "role": "Developer"
-        },
+        }
     ],
     "minimum-stability": "dev",
     "require": {
